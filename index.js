@@ -1,16 +1,18 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import  {goalRoutes} from "./routes/goalRoutes";
+import cors from "cors";
+import  {getGoals} from "./routes/goalRoutes";
 
 dotenv.config();
 
 const app = express()
 
-const port = process.env.PORT || 1200
+const port = process.env.PORT 
 
+app.use(cors())
 app.use(express.json())
 
-app.post('/api/goals', goalRoutes);
+app.get('/api/goals', getGoals);
 
 app.listen(port, ()=>{
     console.log(`server is running at ${port}`);
