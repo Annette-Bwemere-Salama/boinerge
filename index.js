@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from "cors";
-import  {getGoals, postGoals, putGoals, deleteGoals} from "./routes/goalRoutes";
+import {Goalget,goalPost,goalPut,Goaldelete,} from "./routes/getRouter.js"
 
 dotenv.config();
 
@@ -12,10 +12,12 @@ const port = process.env.PORT
 app.use(cors())
 app.use(express.json())
 
-app.get('/api/goals', getGoals);
-app.post('/api/goals', postGoals);
-app.put('/api/goals/:id', putGoals);
-app.delete('/api/goals/:id', deleteGoals)
+app.use(Goalget);
+app.use(goalPost);
+app.use(goalPut);
+app.use(Goaldelete);
+
+
 
 
 app.listen(port, ()=>{
