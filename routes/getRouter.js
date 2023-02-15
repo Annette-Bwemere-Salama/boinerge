@@ -4,6 +4,5 @@ const router = Router()
 
 
 export const GoalgetPost = router.get('/', getGoals).post('/', postGoals);
-// export const goalPost = router.post('/', postGoals);
 export const goalUpdateAntDeleteId = router.put('/:id', upadateGoals).delete('/:id', deleteGoals);
-// export const Goaldelete = router.delete('/:id', deleteGoals)
+
