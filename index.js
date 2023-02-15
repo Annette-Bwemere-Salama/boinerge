@@ -1,16 +1,23 @@
 import express from 'express';
-// import cors from "cors"
-// import mongoose from "mongoose"
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+import cors from "cors";
+import  {getGoals, postGoals, putGoals, deleteGoals} from "./routes/goalRoutes";
 
 dotenv.config();
 
 const app = express()
 
-const port = process.env.PORT
-// app.use(cors())
+const port = process.env.PORT 
+
+app.use(cors())
 app.use(express.json())
-    
-const server = app.listen(port, ()=>{
+
+app.get('/api/goals', getGoals);
+app.post('/api/goals', postGoals);
+app.put('/api/goals/:id', putGoals);
+app.delete('/api/goals/:id', deleteGoals)
+
+
+app.listen(port, ()=>{
     console.log(`server is running at ${port}`);
 })
