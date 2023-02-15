@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from "cors";
-import {GoalgetPost,goalPut,Goaldelete,} from "./routes/getRouter.js"
+import {GoalgetPost,goalUpdateAntDeleteId} from "./routes/getRouter.js"
 
 dotenv.config();
 
@@ -13,8 +13,8 @@ app.use(cors())
 app.use(express.json())
 
 app.use(GoalgetPost);
-app.use(goalPut);
-app.use(Goaldelete);
+app.use(goalUpdateAntDeleteId);
+
 
 
 
