@@ -6,10 +6,21 @@ router.Router()
 //@route PUT /api/goals
 //@access Private
 export const getGoals = async (req,res)=>{
-    console.log(req.body);
-    res.status(200).json({message: 'Get Goals'})
-    console.log(req.body);
-
+    // if(!req.body.test){
+    //     throw new Error('Please Add a Test fild')
+    // };
+    
+    
+    try {
+        if(req.body.test){
+            res.status(200).json({message: ' Post Goals'})  
+        }
+    } catch (error) {
+        if(!req.body.test){
+                res.status(400).json({message: "Please Add a Test field"})
+                console.log(error);
+            }
+        }
 }
 
 
