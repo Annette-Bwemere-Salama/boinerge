@@ -6,10 +6,6 @@ router.Router()
 //@route PUT /api/goals
 //@access Private
 export const getGoals = async (req,res)=>{
-    // if(!req.body.test){
-    //     throw new Error('Please Add a Test fild')
-    // };
-    
     
     try {
         if(req.body.test){
