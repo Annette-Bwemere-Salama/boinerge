@@ -6,14 +6,18 @@ router.Router()
 //@route PUT /api/goals
 //@access Private
 export const getGoals = async (req,res)=>{
+    console.log(req.body);
     res.status(200).json({message: 'Get Goals'})
-    console.log(req.body)
+    console.log(req.body);
+
 }
 
 
 export const postGoals = async (req,res)=>{
+    console.log(req.body);
     res.status(200).json({message: 'Set Post Goals'})
-    console.log(req.body)
+    console.log(req.body);
+
 
 }
 

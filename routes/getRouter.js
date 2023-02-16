@@ -1,4 +1,5 @@
-import  {getGoals, postGoals, upadateGoals, deleteGoals} from "../controler/getControllers";
+// import  {getGoals, postGoals, upadateGoals, deleteGoals} from "./controler/getControllers";
+import { getGoals , postGoals, upadateGoals, deleteGoals} from "../controler/getControllers";
 import {Router} from "express";
 const router = Router()
 
