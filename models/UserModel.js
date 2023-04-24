@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-
-const { Schema } = mongoose
+import { Schema } from "./Dotations";
+// const { Schema } = mongoose
 
 const userSchema = new Schema({
     username: {

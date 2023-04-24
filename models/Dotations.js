@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const Schema = mongoose.Schema;
+export const Schema = mongoose.Schema;
 const donationSchema = new Schema({
     amount: {
         type: Number,
@@ -15,4 +15,4 @@ const donationSchema = new Schema({
     }
 });
 
-const Donation = mongoose.model("Donation", donationSchema)
+ export const Donation = mongoose.model("Donation", donationSchema)
